@@ -14,6 +14,11 @@ The game uses two algorithms :<br>
 <br>
 There are 9 difficulty levels (1-9)  for the Bot. Player can choose the difficulty level for the Bot they want to play with for Human vs Bot game. In case of Bot vs Bot game , these levels define thinking depth of respective Bot. Minmax algorithm used in this program uses scores to determine the best move. For Bot’s move, if a move results in win of Bot , the score returned is +10 . In case a move results in win of human player , the score returned is -10. In case of a tie , the score returned is 0. The difficulty levels signifies the number of recursive call a bot can make in determining the best move for it. For example, if the bot has difficulty level of 5 and it has already done 5 recursive calls , then if bot neither wins nor lose with a given move , instead of another recursion , score 0 (Match tie) is returned. Thus, by limiting the number of recursive calls made , we limit the intelligence of bot.
 
+<br>
+Assume that there are 2 possible ways for X to win the game from a give board state.<br>
+•	Move A : X can win in 2 move<br>
+•	Move B : X can win in 4 moves<br>
+Our evaluation function will return a value of +10 for both moves A and B. Even though the move A is better because it ensures a faster victory, our AI may choose B sometimes. To overcome this problem we subtract the depth value from the evaluated score. This makes our AI even more smarter!
 <br><br>
 The game also provides Hint option. On clicking Hint button , program runs Minmax algorithm from the perspective of human, that it , program tries to maximize Human score and minimize Bot’s score and return the best possible move for human to win. Hence, MinMax algorithm uses the maximum intelligence , that is, uses the difficulty level 9 for determining next move.
 
