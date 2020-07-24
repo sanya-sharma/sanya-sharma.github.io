@@ -1,2 +1,2 @@
-# PathFinding
-Path Finding Navigator
+# TicTacToe
+Tic Tac Toe
