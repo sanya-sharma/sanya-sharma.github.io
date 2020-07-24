@@ -86,7 +86,7 @@ function selectPlayer(playersSelected){
 
     players="HvB";
     document.querySelector('#left').innerHTML = "<img src='./imgs/robotImage.jpg' class='image' alt='Robot Image'>";
-    document.querySelector('#right').innerHTML = "<img src='https://github.com/sanya-sharma/sanya-sharma.github.io/blob/master/imgs/astronautImage2.jpg'class='image' alt='Human Image'>";
+    document.querySelector('#right').innerHTML = "<img src='./imgs/astronautImage2.jpg'class='image' alt='Human Image'>";
     document.querySelector('.selectSym p').innerHTML = "Select Symbol <br> X: First Move<br> O:Second Move";
     document.querySelector('.selectMethod').style.display = "block";
 
