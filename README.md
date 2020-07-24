@@ -78,3 +78,7 @@ Alpha is the best value that the maximizer currently can guarantee at that level
 Beta is the best value that the minimizer currently can guarantee at that level or above.
 <br><br>
  Initially alpha is negative infinity and beta is positive infinity, i.e. both players start with their lowest possible score. It can happen that when choosing a certain branch of a certain node the minimum score that the minimizing player is assured of becomes less than the maximum score that the maximizing player is assured of (beta <= alpha). If this is the case, the parent node should not choose this node, because it will make the score for the parent node worse. Therefore, the other branches of the node do not have to be explored.
+ 
+ <br><br>
+ The website is displayed [here](https://sanya-sharma.github.io/)
+
