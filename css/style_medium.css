@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&display=swap');
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: white black;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+body,html{
+  height: 100%;
+  width:100%;
+  margin: 0px;
+}
+
+
+
+
+    #footer {
+          color: #FFFFFF;
+          font-size: 100%;
+          text-align: center;
+          position: absolute;
+          width: 200px;
+          top: 93%;
+          left: 35%;
+          bottom: 3%;
+          padding: 5px;
+          border-radius: 5px;
+   }
+
+   #footer a{
+          color: #dffc03;
+          position: relative;
+   }
+
+
+
+   section {
+          background-repeat: repeat;
+          background-size: cover;
+
+          isolation: isolate;
+
+          position: relative;
+
+          height: 100vh;
+   }
+
+   .wrapper {
+          clip: rect(auto auto auto auto);
+
+          position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    }
+
+    #container {
+    	margin: 50px 0 0 0;
+    	text-align: center;
+    }
+
+    #content {
+    	margin: 5% 0% 0% 0%;
+    	display: inline-block;
+    	color: #ffffff;
+    	border-right: 3px solid #2980b9;
+    	font-family: 'Grenze Gotisch', cursive;
+      font-size: 6em;
+      margin-top: 0%;
+    }
+
+    #canvas{
+      height: 200vh;
+      width: 100vw;
+      position:absolute;
+      left:0;
+      top:0;
+      margin-bottom: -20px;
+      z-index:-1;
+      min-width: 850px;
+    }
+
+    #background{
+      height: 100vh;
+      width: 100vw;
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:-1;
+      min-width: 850px;
+    }
+
+    #left{
+      display: inline-block;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 30%;
+      left: 50%;
+      top: 5%;
+      background-color: rgba(0,0,0,0.8);
+      color: #FFFFFF;
+      border-radius: 10px;
+      border: 1px #ffffff;
+      border-style: solid;
+      box-shadow: 0 4px 8px 0 rgba(255,255,255, 0.25), 0 6px 4px 0 rgba(255,255,255, 0.19);
+    }
+
+    #leftText{
+      display: inline-block;
+      position: absolute;
+      float: left;
+      width: 25%;
+      height: 7%;
+      left: 58%;
+      top: 37%;
+      font-size: 1.5em;
+      text-align: center;
+      vertical-align: middle;
+      padding-top: 1%;
+      background-color: rgba(0,0,0,0.8);
+      color: #FFFFFF;
+      border-radius: 10px;
+      border: 1px #ffffff;
+      border-style: solid;
+      box-shadow: 0 6px 4px 0 rgba(255,255,255, 0.19);
+    }
+
+    .image{
+      width: 100%;
+      height: 100%;
+      opacity: 0.75;
+    }
+
+    #center{
+      display: inline-block;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 41%;
+      left: 5%;
+      top: 35%;
+      background-color: rgba(247, 247, 247,0.7);
+      color: #000000;
+      border-radius: 10px;
+      border: 1px #ffffff;
+      border-style: solid;
+    }
+
+    #right{
+      display: inline-block;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 30%;
+      left: 50%;
+      top: 50%;
+      background-color: rgba(0,0,0,0.8);
+      color: #FFFFFF;
+      border: 1px #ffffff;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(255,255,255, 0.25), 0 6px 4px 0 rgba(255,255,255, 0.19);
+    }
+
+    #rightText{
+      display: inline-block;
+      position: absolute;
+      float: left;
+      width: 25%;
+      height: 7%;
+      left: 58%;
+      top: 81.5%;
+      background-color: rgba(0,0,0,0.8);
+      color: #FFFFFF;
+      font-size: 1.5em;
+      text-align: center;
+      vertical-align: middle;
+      padding-top: 1%;
+      border-radius: 10px;
+      border: 1px #ffffff;
+      border-style: solid;
+      box-shadow: 0 6px 4px 0 rgba(255,255,255, 0.19);
+    }
+
+
+    #hint{
+      position: absolute;
+      display: inline-block;
+      top: 83%;
+      left: 7%;
+      height: 10%;
+      width: 15%;
+      font-size: 1em;
+      border-radius: 10px;
+      background-color: rgba(67, 216, 201,0.8);
+      box-shadow: 0 4px 4px 0 rgba(67, 216, 201, 0.2), 0 4px 4px 0 rgba(67, 216, 201, 0.19);
+    }
+
+    #hint:hover{
+      top: 82.5%;
+      height: 11%;
+    }
+
+    #replay{
+      position: absolute;
+      display: inline-block;
+      top: 83%;
+      left: 27%;
+      height: 10%;
+      width: 15%;
+      font-size:1em;
+      border-radius: 10px;
+      background-color: rgba(67, 216, 201,0.8);
+      box-shadow: 0 4px 4px 0 rgba(67, 216, 201, 0.2), 0 4px 4px 0 rgba(67, 216, 201, 0.19);
+    }
+
+    #replay:hover{
+      top: 82.5%;
+      height: 11%;
+    }
+
+    #hint img{
+      position: absolute;
+      left: -20%;
+      height: 100%;
+    }
+
+
+    td {
+      border:  2px solid #333;
+      height:  100px;
+      width:  100px;
+      text-align:  center;
+      vertical-align:  middle;
+      color: rgba(0,0,0,0.8);
+      font-family:  "Comic Sans MS", cursive, sans-serif;
+      font-size:  70px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      border-collapse: collapse;
+    }
+
+    table tr:first-child td {
+      border-top: 0;
+    }
+
+    table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    table tr td:first-child {
+      border-left: 0;
+    }
+    table tr td:last-child {
+      border-right: 0;
+    }
+
+    table tr:first-child td:first-child{
+      border-top-left-radius: 10px;
+    }
+
+    table tr:first-child td:last-child{
+      border-top-right-radius: 10px;
+    }
+
+    table tr:last-child td:first-child{
+      border-bottom-left-radius: 10px;
+    }
+
+    table tr:last-child td:last-child{
+      border-bottom-right-radius: 10px;
+    }
+
+    table td:hover{
+      background: #5da58d;
+    }
+
+    .endgame {
+      display: none;
+      width:  35%;
+      top: 10%;
+      background-color: rgba(67, 216, 201, 0.8);
+      position: absolute;
+      left: 6%;
+      height: 15%;
+      text-align: center;
+      vertical-align: middle;
+      padding: 4% 1% 0% 1%;
+      border-radius: 5px;
+      color: white;
+      font-size: 2.5em;
+      border: 1px #000000;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(67, 216, 201, 0.25), 0 6px 10px 0 rgba(67, 216, 201, 0.19);
+    }
+
+    .selectSym{
+      display: none;
+      width:  33%;
+      top: 2%;
+      background-color: rgba(149, 56, 158, 0.8);
+      position: absolute;
+      left: 7.5%;
+      height: 30%;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.8em;
+      border: 1px #ffffff;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(149, 56, 158, 0.25), 0 6px 10px 0 rgba(149, 56, 158, 0.19);
+    }
+
+    .selectDif{
+      display: none;
+      width:  33%;
+      top: 2%;
+      background-color: rgba(149, 56, 158, 0.8);
+      position: absolute;
+      left: 7.5%;
+      height: 30%;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.3em;
+      border: 1px #ffffff;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(149, 56, 158, 0.25), 0 6px 10px 0 rgba(149, 56, 158, 0.19);
+    }
+
+    .selectDifBot{
+      display: none;
+      width:  33%;
+      top: 2%;
+      background-color: rgba(149, 56, 158, 0.8);
+      position: absolute;
+      left: 7.5%;
+      height: 30%;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.3em;
+      border: 1px #ffffff;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(149, 56, 158, 0.25), 0 6px 10px 0 rgba(149, 56, 158, 0.19);
+    }
+
+    .selectPlayer{
+      display: none;
+      width:  33%;
+      top: 3%;
+      background-color: rgba(149, 56, 158, 0.8);
+      position: absolute;
+      left: 7.5%;
+      height: 30%;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.2em;
+      border: 1px #ffffff;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(149, 56, 158, 0.25), 0 6px 10px 0 rgba(149, 56, 158, 0.19);
+    }
+
+    .selectMethod{
+      display: none;
+      width:  33%;
+      top: 2%;
+      background-color: rgba(149, 56, 158, 0.8);
+      position: absolute;
+      left: 7.5%;
+      height: 30%;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.5em;
+      border: 1px #ffffff;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(149, 56, 158, 0.25), 0 6px 10px 0 rgba(149, 56, 158, 0.19);
+    }
+
+    .instruct{
+      display: none;
+      width:  33%;
+      top: 2%;
+      background-color: rgba(149, 56, 158, 0.8);
+      position: absolute;
+      left: 7.5%;
+      height: 30%;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.3em;
+      border: 1px #ffffff;
+      border-style: solid;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(149, 56, 158, 0.25), 0 6px 10px 0 rgba(149, 56, 158, 0.19);
+    }
+
+    .timeStamp{
+      display: none;
+      position: absolute;
+      float: left;
+      width: 40%;
+      height: 3%;
+      left: 7.5%;
+      top: 76%;
+      color: #FFFFFF;
+     vertical-align: top;
+    }
+
+    .timeStamp p{
+      display: inline-block;
+    }
+
+    .pastMove {
+        background: #d0d0d0;
+        pointer-events: none;
+    }
+
+
+    .selectSym button{
+      position: relative;
+      float: left;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size:  0.9em;
+      width: 15%;
+      height: 20%;
+      margin: 0%;
+    }
+
+    .selectSym button:hover{
+      height: 22%;
+      background-color: rgba(255, 242, 230,0.8);
+    }
+
+    .selectDif button{
+      position: relative;
+      float: left;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size:  0.8em;
+      width:10%;
+      height: 30%;
+      margin: 0%;
+    }
+
+    .selectDif button:hover{
+      height: 32%;
+      margin-top: -0.5%;
+      background-color: rgba(255, 242, 230,0.8);
+    }
+
+    .selectDifBot button{
+      position: relative;
+      float: left;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size:  0.8em;
+      width:10%;
+      height: 30%;
+      margin: 0%;
+    }
+
+    .selectDifBot button:hover{
+      height: 32%;
+      margin-top: -0.5%;
+      background-color: rgba(255, 242, 230,0.8);
+    }
+
+    .selectPlayer button{;
+      position: relative;
+      float: left;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size:  0.8em;
+      width: 80%;
+      height: 30%;
+      margin: 3% 2%;
+      left: 0%;
+      border-style: outset;
+      border: 1px;
+      transition: 0.5s;
+    }
+
+    .selectPlayer button:hover{
+      width: 82%;
+      background-color: rgba(255, 242, 230,0.8);
+    }
+
+    .selectMethod button{
+      position: relative;
+      float: left;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size:  0.6em;
+      width: 37%;
+      height: 70%;
+      margin: 0% 5%;
+    }
+
+    .selectMethod button:hover{
+      height: 72%;
+      background-color: rgba(255, 242, 230,0.8);
+    }
+
+    .selectSym  button:first-of-type {
+      margin-left: 30%;
+      margin-right: 5%;
+
+    }
+    .selectSym  button:last-of-type {
+      margin-left: 5%;
+      margin-right: 2%;
+    }
+
+    .selectDif  button:first-of-type {
+      margin-left: 5%;
+    }
+    .selectDif button:last-of-type {
+      margin-right: 5%;
+    }
+
+    .selectDifBot  button:first-of-type {
+      margin-left: 5%;
+    }
+    .selectDifBot button:last-of-type {
+      margin-right: 5%;
+    }
+
+    .selectPlayer  button:first-of-type {
+      margin-top: -5%;
+      margin-left: 2%;
+    }
+    .selectPlayer button:last-of-type {
+      margin-right: 5%;
+    }
+
+    .selectMethod  button:first-of-type {
+      margin-left: 5%;
+    }
+    .selectMethod button:last-of-type {
+      margin-right: 5%;
+    }
