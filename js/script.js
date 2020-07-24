@@ -86,7 +86,7 @@ function selectPlayer(playersSelected){
 
     players="HvB";
     document.querySelector('#left').innerHTML = "<img src='./imgs/robotImage.jpg' class='image' alt='Robot Image'>";
-    document.querySelector('#right').innerHTML = "<img src='https://github.com/sanya-sharma/sanya-sharma.github.io/blob/master/imgs/astronautImage2.jpg'class='image' alt='Human Image'>";
+    document.querySelector('#right').innerHTML = "<img src='./imgs/astronautImage2.jpg'class='image' alt='Human Image'>";
     document.querySelector('.selectSym p').innerHTML = "Select Symbol <br> X: First Move<br> O:Second Move";
     document.querySelector('.selectMethod').style.display = "block";
 
@@ -96,9 +96,9 @@ function selectPlayer(playersSelected){
   else if (playersSelected=="HvH"){
 
     players="HvH";
-    document.querySelector('#left').innerHTML = "<img src='../astronautImage2.jpg' class='image' alt='Human Image'>";
+    document.querySelector('#left').innerHTML = "<img src='./imgs/astronautImage2.jpg' class='image' alt='Human Image'>";
     flipImage();
-    document.querySelector('#right').innerHTML = "<img src='../astronautImage2.jpg' class='image' alt='Human Image'>";
+    document.querySelector('#right').innerHTML = "<img src='./imgs/astronautImage2.jpg' class='image' alt='Human Image'>";
     document.querySelector('.selectSym p').innerHTML = "Select Symbol for First Player";
     document.querySelector('.selectSym').style.display = "block";
 
@@ -109,8 +109,8 @@ function selectPlayer(playersSelected){
 
     players="BvB";
     choice=1;
-    document.querySelector('#left').innerHTML = "<img src='../robotImage.jpg' class='image' alt='Robot Image'>";
-    document.querySelector('#right').innerHTML = "<img src='../robotImage.jpg' class='image' alt='Robot Image'>";
+    document.querySelector('#left').innerHTML = "<img src='./imgs/robotImage.jpg' class='image' alt='Robot Image'>";
+    document.querySelector('#right').innerHTML = "<img src='./imgs/robotImage.jpg' class='image' alt='Robot Image'>";
     document.querySelector('#leftText').innerHTML = 'Bot 1 : X';
     document.querySelector('#rightText').innerHTML = 'Bot 2: O';
     document.querySelector('.selectDifBot p').innerHTML = "Select Thinking Level For 1st Bot";
@@ -425,10 +425,10 @@ function gameOver(gameWon){
   if (players=='HvB') {
 
     if(gameWon.player===huPlayer){
-      document.querySelector('#right').innerHTML = "<img src='../astronautGIF2.gif' class='image' alt='Human GIF'>";
+      document.querySelector('#right').innerHTML = "<img src='./imgs/astronautGIF2.gif' class='image' alt='Human GIF'>";
     }
     else {
-      document.querySelector('#left').innerHTML = "<img src='../robotGIF.gif' class='image' alt='Robot GIF'>";
+      document.querySelector('#left').innerHTML = "<img src='./imgs/robotGIF.gif' class='image' alt='Robot GIF'>";
     }
 
     declareWinner(gameWon.player === huPlayer ? "You win!" : "You lose");
@@ -441,10 +441,10 @@ function gameOver(gameWon){
   else if (players=="HvH"){
 
     if(gameWon.player===rightPlayer){
-      document.querySelector('#right').innerHTML = "<img src='../astronautGIF2.gif' class='image' alt='Human GIF'>";
+      document.querySelector('#right').innerHTML = "<img src='./imgs/astronautGIF2.gif' class='image' alt='Human GIF'>";
     }
     else {
-      document.querySelector('#left').innerHTML = "<img src='../astronautGIF2.gif' class='image' alt='Human GIF'>";
+      document.querySelector('#left').innerHTML = "<img src='./imgs/astronautGIF2.gif' class='image' alt='Human GIF'>";
     }
 
     declareWinner(gameWon.player === leftPlayer ? "Player 1 wins!" : "Player 2 Wins!");
@@ -457,10 +457,10 @@ function gameOver(gameWon){
   else{
 
     if(gameWon.player===bot2){
-      document.querySelector('#right').innerHTML = "<img src='../robotGIF.gif' class='image' alt='Robot GIF'>";
+      document.querySelector('#right').innerHTML = "<img src='./imgs/robotGIF.gif' class='image' alt='Robot GIF'>";
     }
     else {
-      document.querySelector('#left').innerHTML = "<img src='../robotGIF.gif' class='image' alt='Robot GIF'>";
+      document.querySelector('#left').innerHTML = "<img src='./imgs/robotGIF.gif' class='image' alt='Robot GIF'>";
     }
 
     declareWinner(gameWon.player === bot1 ? " Bot 1 wins!" : "Bot 2 Wins!");
